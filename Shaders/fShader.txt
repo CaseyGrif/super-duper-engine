@@ -12,5 +12,8 @@ out vec4 FragColor;
 
 void main()
 {
-    FragColor = vec4(u_mouse.x, 0.0, u_mouse.y, 1.0f);
+    vec2 normCoords = gl_FragCoord.xy/(u_resolution); // normalized resolution coordinates
+    FragColor = vec4(u_mouse.x, 0.3, u_mouse.y, 1.0f);
 }
+
+

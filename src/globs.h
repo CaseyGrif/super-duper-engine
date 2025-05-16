@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include "shaders.h"
 
 
@@ -6,6 +7,9 @@
 extern unsigned int VBO[];
 extern unsigned int VAO[];
 extern unsigned int EBO;
+extern float rectangle[];
+
+
 
 
 extern int vertexColorLocation;
@@ -24,4 +28,13 @@ public:
 	float y;
 };
 
+class Rectangle
+{
+public:
+	float vertices[13]{
+
+	};
+
+
+};
 

@@ -5,6 +5,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <vector>
 
 #include "globs.h"
 #include "shaders.h"
@@ -18,6 +19,8 @@ double cursorPosX;
 double cursorPosY;
 GLFWwindow* window;
 Cursor cursor;
+Rectangle rect;
+
 
 
 
@@ -64,8 +67,15 @@ int main()
 	int mouse = glGetUniformLocation(newShader.ID, "u_mouse");
 	int resolution = glGetUniformLocation(newShader.ID, "u_resolution");
 
+	Rectangle rect;
+	
+
+
 	gen_VBO_VAO();
 
+
+
+	
 	newShader.use();
 
 
@@ -74,7 +84,7 @@ int main()
 	while (!glfwWindowShouldClose(window))
 	{	
 
-		glClearColor(0.2f, 0.3f, 0.3f, 0.0f);	// sets default clear color
+		glClearColor(0.0f, 0.0f, 0.0f, 0.0f);	// sets default clear color
 		glClear(GL_COLOR_BUFFER_BIT);			// clears color buffer with clear color
 
 
@@ -86,11 +96,15 @@ int main()
 		// normalizes into float between 0-1
 		cursor.x = cursorPosX / width;
 		cursor.y = cursorPosY / height;
+		glUniform2f(resolution, (float)width, (float)height);
 		glUniform2f(mouse, cursor.x, cursor.y); // uniforms normalized cursor pos
 
+	
+		
 
-		std::cout << (float)cursor.x << std::endl;
-		std::cout << (float)cursor.y << std::endl;
+
+		//std::cout << (float)cursor.x << ", " << (float)cursor.y << std::endl;
+		
 
 		//changeColorOverTime();
 		// draws trianlge

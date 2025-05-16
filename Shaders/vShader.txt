@@ -2,8 +2,31 @@
 layout (location = 0) in vec3 aPos;
 layout (location = 1) in vec3 aColor;
 
+vec3 currPos;
+vec2 normRes;
+vec2 normMouse;
+uniform vec2 u_mouse;
+uniform vec2 u_resolution;
+
+void shrink(int sizeMult)
+{
+    currPos = (aPos.xyz / sizeMult);
+}
+
+// set mouse coords to same origin as vertices
+
+
+void move(vec3 currentPosition)
+{
+    currPos = vec3((currentPosition.x + normMouse.x), (currentPosition.y - normMouse.y), currentPosition.z);
+}
 
 void main()
 {
-    gl_Position = vec4(aPos, 1.0);
+    
+    normMouse = vec2(u_mouse.x - 0.5, u_mouse.y - 0.5);
+
+    shrink(2);
+    move(currPos);
+    gl_Position = vec4(currPos, 1.0);
 }
