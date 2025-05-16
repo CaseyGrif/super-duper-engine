@@ -8,12 +8,10 @@ const char* vertShaderResource = "#version 460 core\n"
 // input variable created as vec3
 // sets location of vec3 variable to 0
 "layout (location = 0) in vec3 aPos;\n"
-"out vec3 vertexColor;\n"
 
 "void main()\n"
 "{\n"
 	"gl_Position = vec4(aPos, 1.0);\n"
-	"vertexColor = vec3(0.5f, 0.0f, 0.0f);\n"
 "}\0";
 
 const char* fragShaderResource =
@@ -36,16 +34,6 @@ const char* fragShaderResource =
 unsigned int fragShader;
 unsigned int vertShader;
 unsigned int shaderProgram;
-float timeValue;
-float greenValue;
-int vertexColorLocation;
-
-void changeColorOverTime()
-{
-	timeValue = glfwGetTime();
-	greenValue = (sin(timeValue) / 2.0f) + 0.5f;
-	vertexColorLocation = glGetUniformLocation(shaderProgram, "color");
-}
 
 void compileFragShader()
 {

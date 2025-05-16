@@ -71,13 +71,12 @@ int main()
 		changeColorOverTime();
 		// draws trianlge
 		glUseProgram(shaderProgram);
-		glUniform4f(vertexColorLocation, 1.0f, greenValue, 0.0f, 1.0f);
+		glUniform4f(vertexColorLocation,  rValue, gValue, bValue, 1.0);
 		glBindVertexArray(VAO[0]);
 		glDrawArrays(GL_TRIANGLES, 0, 3);	
 		
 		glBindVertexArray(VAO[1]);
 		glDrawArrays(GL_TRIANGLES, 0, 3);
-
 		glUseProgram(0);
 
 		// check for events
