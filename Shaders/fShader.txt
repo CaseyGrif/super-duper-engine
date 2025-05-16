@@ -1,0 +1,16 @@
+
+#version 460 core
+
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform vec2 u_mouse;
+uniform vec2 u_resolution;
+
+out vec4 FragColor;
+
+void main()
+{
+    FragColor = vec4(u_mouse.x, 0.0, u_mouse.y, 1.0f);
+}

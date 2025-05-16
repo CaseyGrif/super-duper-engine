@@ -7,13 +7,17 @@
 #include <iostream>
 
 #include "globs.h"
+#include "shaders.h"
+
 
 
 // initialize global variables
 int height;
 int width;
-int key;
+double cursorPosX;
+double cursorPosY;
 GLFWwindow* window;
+Cursor cursor;
 
 
 
@@ -55,29 +59,50 @@ int main()
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);	// callback created for resizing window
 	glfwSetKeyCallback(window, key_pressed_callback);					// callback for key presses
 
-
-	initShaders();
+	// compile and link shaders
+	Shader newShader("shaders/vShader.txt", "shaders/fShader.txt");
+	int mouse = glGetUniformLocation(newShader.ID, "u_mouse");
+	int resolution = glGetUniformLocation(newShader.ID, "u_resolution");
 
 	gen_VBO_VAO();
+
+	newShader.use();
+
 
 	
 	// main render loop
 	while (!glfwWindowShouldClose(window))
 	{	
 
-		glClearColor(0.0f, 0.0f, 0.0f, 0.0f);	// sets default clear color
+		glClearColor(0.2f, 0.3f, 0.3f, 0.0f);	// sets default clear color
 		glClear(GL_COLOR_BUFFER_BIT);			// clears color buffer with clear color
 
-		changeColorOverTime();
+
+		// finding mouse position & resolution
+		// -----------------------------------
+		glfwGetCursorPos(window, &cursorPosX, &cursorPosY); // grab cursor pos
+		glfwGetWindowSize(window, &width, &height); // grab resolution
+
+		// normalizes into float between 0-1
+		cursor.x = cursorPosX / width;
+		cursor.y = cursorPosY / height;
+		glUniform2f(mouse, cursor.x, cursor.y); // uniforms normalized cursor pos
+
+
+		std::cout << (float)cursor.x << std::endl;
+		std::cout << (float)cursor.y << std::endl;
+
+		//changeColorOverTime();
 		// draws trianlge
-		glUseProgram(shaderProgram);
-		glUniform4f(vertexColorLocation,  rValue, gValue, bValue, 1.0);
-		glBindVertexArray(VAO[0]);
-		glDrawArrays(GL_TRIANGLES, 0, 3);	
+
+		newShader.use();
 		
 		glBindVertexArray(VAO[1]);
-		glDrawArrays(GL_TRIANGLES, 0, 3);
-		glUseProgram(0);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		//glDrawArrays(GL_TRIANGLES, 0, 3);
+		//glDrawArrays(GL_TRIANGLES, 2, 3);
+
+		
 
 		// check for events
 		// swaps buffers		
@@ -85,8 +110,14 @@ int main()
 		glfwPollEvents();	
 
 
+
+
 	}
+	// de-allocates resources
+	glDeleteVertexArrays(1, &VAO[0]);
+	glDeleteBuffers(1, &VBO[0]);
 	
+
 	glfwTerminate();
 	return 0;
 }

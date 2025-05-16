@@ -169,13 +169,16 @@
   <ItemGroup>
     <ClCompile Include="src\callbacks.cpp" />
     <ClCompile Include="D:\Chrome Download Dir\glad\src\glad.c" />
-    <ClCompile Include="src\shaderColors.cpp" />
-    <ClCompile Include="src\shaders.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\vertices.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\globs.h" />
+    <ClInclude Include="src\shaders.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Shaders\fShader.txt" />
+    <Text Include="Shaders\vShader.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

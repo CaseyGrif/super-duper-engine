@@ -16,20 +16,19 @@
     <ClCompile Include="src\callbacks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\shaders.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\vertices.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\shaderColors.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\globs.h" />
+    <ClInclude Include="src\shaders.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Shaders\fShader.txt" />
+    <Text Include="Shaders\vShader.txt" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,7 @@
-﻿  shaderColors.cpp
-C:\Users\cgrif\source\repos\openGl\src\shaderColors.cpp(19,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\cgrif\source\repos\openGl\src\shaderColors.cpp(20,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\cgrif\source\repos\openGl\src\shaderColors.cpp(21,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\cgrif\source\repos\openGl\src\shaderColors.cpp(22,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿  callbacks.cpp
+  main.cpp
+C:\Users\cgrif\source\repos\openGl\src\main.cpp(87,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\cgrif\source\repos\openGl\src\main.cpp(88,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  vertices.cpp
+  Generating Code...
   openGl.vcxproj -> C:\Users\cgrif\source\repos\openGl\build\openGl.exe
