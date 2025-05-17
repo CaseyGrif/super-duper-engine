@@ -10,6 +10,7 @@ void key_pressed_callback(GLFWwindow* window, int key, int scancode, int action,
 
 	switch (key)
 	{
+
 	case GLFW_KEY_ESCAPE:
 		glfwSetWindowShouldClose(window, true);
 		break;

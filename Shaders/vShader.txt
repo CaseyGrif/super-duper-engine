@@ -1,32 +1,35 @@
 #version 460 core
 layout (location = 0) in vec3 aPos;
 layout (location = 1) in vec3 aColor;
+layout (location = 2) in vec2 aTexCoords;
 
-vec3 currPos;
+out vec2 TexCoords;
+vec3 currPos = aPos;
 vec2 normRes;
 vec2 normMouse;
+vec3 realPosition;
 uniform vec2 u_mouse;
 uniform vec2 u_resolution;
+float xMult;
+float yMult;
+
+
+uniform mat4 transform;
 
 void shrink(int sizeMult)
 {
     currPos = (aPos.xyz / sizeMult);
 }
 
-// set mouse coords to same origin as vertices
 
-
-void move(vec3 currentPosition)
-{
-    currPos = vec3((currentPosition.x + normMouse.x), (currentPosition.y - normMouse.y), currentPosition.z);
-}
 
 void main()
 {
-    
-    normMouse = vec2(u_mouse.x - 0.5, u_mouse.y - 0.5);
-
-    shrink(2);
-    move(currPos);
-    gl_Position = vec4(currPos, 1.0);
+//    float xMult = (u_resolution.x / 1920);
+//    float yMult = (u_resolution.y / 1080);
+ //   normMouse = vec2(((u_mouse.x - 0.5)/xMult), ((u_mouse.y - 0.5)/yMult));
+//
+ //   move(currPos);
+ //   realPosition = vec3(currPos.x, currPos.y, currPos.z);
+    gl_Position = transform * vec4(aPos, 1.0);
 }

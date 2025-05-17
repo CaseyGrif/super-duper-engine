@@ -1,4 +1,10 @@
 #pragma once
+// glm includes
+//---------------------
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include <vector>
 #include "shaders.h"
 
@@ -8,6 +14,7 @@ extern unsigned int VBO[];
 extern unsigned int VAO[];
 extern unsigned int EBO;
 extern float rectangle[];
+extern 	int transformLoc;
 
 
 
@@ -28,13 +35,5 @@ public:
 	float y;
 };
 
-class Rectangle
-{
-public:
-	float vertices[13]{
 
-	};
-
-
-};
 

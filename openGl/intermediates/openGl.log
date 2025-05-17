@@ -1,4 +1,4 @@
 ﻿  main.cpp
-C:\Users\cgrif\source\repos\openGl\src\main.cpp(97,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\cgrif\source\repos\openGl\src\main.cpp(98,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\cgrif\source\repos\openGl\src\main.cpp(103,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\cgrif\source\repos\openGl\src\main.cpp(104,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   openGl.vcxproj -> C:\Users\cgrif\source\repos\openGl\build\openGl.exe
