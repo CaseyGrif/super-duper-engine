@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "OpenGL\\x64\\Debug\\shaders.h.obj",
+            "outputs": [
+                "C:\\Users\\cgrif\\source\\repos\\OpenGLExperimenting\\OpenGL\\x64\\Debug\\vc143.pdb",
+                "OpenGL\\x64\\Debug\\",
+                "C:\\Users\\cgrif\\source\\repos\\OpenGLExperimenting\\OpenGL\\x64\\Debug\\shaders.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "Headers\\shaders.h",
+                    "source-path": "c:\\users\\cgrif\\source\\repos\\openglexperimenting\\headers\\shaders.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

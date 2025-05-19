@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "OpenGL\\x64\\Debug\\shaders.obj",
+            "outputs": [
+                "OpenGL\\x64\\Debug\\shaders.h_51243DBC98886D9B.ifc.dt.module.json",
+                "OpenGL\\x64\\Debug\\shaders.h_51243DBC98886D9B.ifc.dt.d.json",
+                "OpenGL\\x64\\Debug\\shaders.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\cgrif\\source\\repos\\OpenGLExperimenting\\Headers\\shaders.h",
+                    "source-path": "c:\\users\\cgrif\\source\\repos\\openglexperimenting\\headers\\shaders.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

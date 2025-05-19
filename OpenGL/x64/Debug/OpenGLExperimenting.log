@@ -1,0 +1,16 @@
+﻿  Scanning sources for module dependencies...
+  shaders.h
+  Compiling...
+  shaders.h
+C:\Users\cgrif\source\repos\OpenGLExperimenting\Headers\shaders.h(41,40): warning C4101: 'e': unreferenced local variable
+  main.cpp
+C:\Users\cgrif\source\repos\OpenGLExperimenting\Headers\objects.h(96,59): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+  (compiling source file 'Src/main.cpp')
+  
+C:\Users\cgrif\source\repos\OpenGLExperimenting\Headers\shaders.h(41,40): warning C4101: 'e': unreferenced local variable
+  (compiling source file 'Src/main.cpp')
+  
+C:\Users\cgrif\source\repos\OpenGLExperimenting\Src\main.cpp(75,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\cgrif\source\repos\OpenGLExperimenting\Src\main.cpp(75,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\cgrif\source\repos\OpenGLExperimenting\Src\main.cpp(75,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  OpenGLExperimenting.vcxproj -> C:\Users\cgrif\source\repos\OpenGLExperimenting\x64\Debug\OpenGL.exe

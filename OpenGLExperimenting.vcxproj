@@ -24,6 +24,7 @@
     <ProjectGuid>{48cbbde3-af1a-41f0-b20d-f11bfa66b277}</ProjectGuid>
     <RootNamespace>OpenGLExperimenting</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>OpenGL</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -73,22 +74,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ExternalIncludePath>C:\Program Files\Microsoft Visual Studio\2022\Third Party Library\include;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>C:\Program Files\Microsoft Visual Studio\2022\Third Party Library\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\cgrif\source\repos\OpenGLExperimenting;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\cgrif\source\repos\OpenGLExperimenting\Headers;$(IncludePath)</IncludePath>
+    <SourcePath>C:\Users\cgrif\source\repos\OpenGLExperimenting\Src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ExternalIncludePath>C:\Program Files\Microsoft Visual Studio\2022\Third Party Library\include;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>C:\Program Files\Microsoft Visual Studio\2022\Third Party Library\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\cgrif\source\repos\OpenGLExperimenting;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\cgrif\source\repos\OpenGLExperimenting\Headers;$(IncludePath)</IncludePath>
+    <SourcePath>C:\Users\cgrif\source\repos\OpenGLExperimenting\Src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ExternalIncludePath>C:\Program Files\Microsoft Visual Studio\2022\Third Party Library\include;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>C:\Program Files\Microsoft Visual Studio\2022\Third Party Library\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\cgrif\source\repos\OpenGLExperimenting;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\cgrif\source\repos\OpenGLExperimenting\Headers;$(IncludePath)</IncludePath>
+    <SourcePath>C:\Users\cgrif\source\repos\OpenGLExperimenting\Src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ExternalIncludePath>C:\Program Files\Microsoft Visual Studio\2022\Third Party Library\include;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>C:\Program Files\Microsoft Visual Studio\2022\Third Party Library\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\cgrif\source\repos\OpenGLExperimenting;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\cgrif\source\repos\OpenGLExperimenting\Headers;$(IncludePath)</IncludePath>
+    <SourcePath>C:\Users\cgrif\source\repos\OpenGLExperimenting\Src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -159,16 +164,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="globs.h" />
-    <ClInclude Include="callbacks.h" />
-    <ClInclude Include="objects.h" />
-    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Headers\framework.h" />
+    <ClInclude Include="Headers\globs.h" />
+    <ClInclude Include="Headers\callbacks.h" />
+    <ClInclude Include="Headers\objects.h" />
+    <ClInclude Include="Headers\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\Chrome Download Dir\glad\src\glad.c" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="shaders.h" />
+    <ClCompile Include="Src\main.cpp" />
+    <ClCompile Include="Headers\shaders.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="OpenGLExperimenting.ico" />
