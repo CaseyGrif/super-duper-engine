@@ -1,8 +1,0 @@
-﻿  callbacks.cpp
-  shaders.cpp
-C:\Users\cgrif\source\repos\openGl\shaders.cpp(45,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  main.cpp
-  vertices.cpp
-  Generating Code...
-  glad.c
-  openGl.vcxproj -> C:\Users\cgrif\source\repos\openGl\x64\Debug\openGl.exe

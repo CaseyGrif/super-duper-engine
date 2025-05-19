@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "OpenGLEx.48cbbde3\\x64\\Debug\\shaders.obj",
+            "outputs": [
+                "OpenGLEx.48cbbde3\\x64\\Debug\\shaders.h_7C5FB782D645769D.ifc.dt.module.json",
+                "OpenGLEx.48cbbde3\\x64\\Debug\\shaders.h_7C5FB782D645769D.ifc.dt.d.json",
+                "OpenGLEx.48cbbde3\\x64\\Debug\\shaders.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\cgrif\\source\\repos\\OpenGLExperimenting\\shaders.h",
+                    "source-path": "c:\\users\\cgrif\\source\\repos\\openglexperimenting\\shaders.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

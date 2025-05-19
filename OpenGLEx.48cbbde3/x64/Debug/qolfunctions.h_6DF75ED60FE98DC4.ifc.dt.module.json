@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "OpenGLEx.48cbbde3\\x64\\Debug\\qolfunctions.obj",
+            "outputs": [
+                "OpenGLEx.48cbbde3\\x64\\Debug\\qolfunctions.h_6DF75ED60FE98DC4.ifc.dt.module.json",
+                "OpenGLEx.48cbbde3\\x64\\Debug\\qolfunctions.h_6DF75ED60FE98DC4.ifc.dt.d.json",
+                "OpenGLEx.48cbbde3\\x64\\Debug\\qolfunctions.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\cgrif\\source\\repos\\OpenGLExperimenting\\qolfunctions.h",
+                    "source-path": "c:\\users\\cgrif\\source\\repos\\openglexperimenting\\qolfunctions.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
